@@ -1,0 +1,28 @@
+<%
+String unm = request.getParameter("username");
+String error = request.getParameter("error");
+if(unm != null)
+{
+   out.print("you are not valid user"+unm);
+}
+if(error != null)
+{
+   out.print("<h1><font color = red>"+ error +"</font></h1>");
+}
+%>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<b>My First Web Page</b>
+<form action="LoginController">
+User:<input type = text name = "user"> <br>
+password:<input type = password name = "password"> <br>
+<input type = submit value = "login"><br>
+<hr size = 4 color = "green">
+Not an existing user!  <a href = "signup.jsp" style="text-decoration:none;color:green;">sign up</a>
+</form>
+</body>
+</html>
